@@ -14,16 +14,17 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class='container'>
+      <div class='container'>
         <div class="row">
-            <h1>Homepage hello world!</h1>
+            <h1>Homepage!</h1>
         </div>
-
-	<div style="height: 300px;">
-	    {% comment %} asad vai area {% endcomment %}
+	<div class="row" style="height:200px">
+	    {% block carousel %}
+		<span style="font-size: xx-large">Home Carousel</span>
+	    {% endblock carousel %}
 	</div>
-	<div class="row"> <!-- side-bar -->
-	    <div class="col-md-3" style="outline: 1px solid black;"> <!-- menu -->
+	<div class="row">
+	    <div class="col-md-3" style="outline: 1px solid black;">
 		{% comment %} asad vai area {% endcomment %}
 		<div class="linkblock">
 		    <div class="linkblock__text">Home&nbsp;&nbsp;&nbsp;&gt;</div>
@@ -100,16 +101,14 @@
             </div>
             <div class="col-md-9">
                 {% block content%}
-
+		    <span style="font-size: xx-large">Home Content</span>
                 {% endblock %}
             </div>
         </div>
-
-        <footer style="height: 200px;">
-        
-        </footer>
-
-        
+	<!-- <footer style="height: 200px;"></footer> -->
+	<div class="row" style="height:100px; text-align:center;">
+	    <span style="width:100%">footer</span>
+	</div>
     </div>
     <script type="text/javascript">
 	$(document).ready(function() {
